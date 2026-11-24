@@ -9,3 +9,188 @@
 .project-action-primary:hover{background:#274e3c;color:#fff}
 .project-private{font-weight:500;color:var(--muted);font-size:11px}
 @media(max-width:720px){.project-actions{align-items:stretch}.project-action{min-height:40px}}
+
+/* Portada editorial inspirada en la composición de TionTech.
+   Identidad preservada: papel #f6f5f1, verde #376a53, grafito #202521. */
+.home-page .site-header{
+  position:sticky;top:0;z-index:40;padding:22px 0;
+  background:rgba(246,245,241,.96);backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);border-bottom:1px solid #d7d9d2;
+}
+.home-page .site-header nav{align-items:center}
+.home-page .site-header .header-contact{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:37px;padding:7px 15px;border:1px solid var(--accent);
+  border-radius:8px;background:var(--accent);color:#fff;
+  transition:background .2s,transform .2s;
+}
+.home-page .site-header .header-contact:hover{background:#284d3a;transform:translateY(-1px)}
+.home-page .intro{
+  position:relative;isolation:isolate;overflow:hidden;
+  min-height:630px;padding:104px 0 112px;
+  background:radial-gradient(ellipse at 86% 35%,rgba(55,106,83,.12),transparent 39%),
+    radial-gradient(ellipse at 13% 100%,rgba(83,138,99,.07),transparent 43%),
+    linear-gradient(120deg,#f6f5f1,#f0f1e9 85%);
+  border-bottom:1px solid var(--line);
+}
+.home-page .intro::before{
+  content:"";position:absolute;inset:0 0 0 auto;width:48%;
+  opacity:.16;z-index:-1;pointer-events:none;
+  background-image:linear-gradient(to right,#9db5a4 1px,transparent 1px),
+    linear-gradient(to bottom,#9db5a4 1px,transparent 1px);
+  background-size:52px 52px;mask-image:linear-gradient(to left,#000,transparent);
+  -webkit-mask-image:linear-gradient(to left,#000,transparent);
+}
+.home-page .intro-layout{
+  display:grid;grid-template-columns:minmax(0,1.17fr) minmax(350px,.83fr);
+  gap:56px;align-items:center;position:relative;
+}
+.home-page .intro-copy{position:relative;z-index:1}
+.home-page .intro-eyebrow{
+  display:inline-flex;align-items:center;gap:10px;margin:0 0 20px;
+  padding:8px 13px;border:1px solid #b9cabd;border-radius:999px;
+  background:rgba(230,239,229,.82);color:var(--accent);
+  font-size:10px;font-weight:800;letter-spacing:.11em;line-height:1.4;
+}
+.home-page .intro-status-dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#4a966c;box-shadow:0 0 0 4px rgba(55,106,83,.1)}
+.home-page .intro-overline{
+  font-size:11px;font-weight:800;letter-spacing:.14em;
+  color:#66786a;margin:0 0 15px;
+}
+.home-page .intro-overline span{padding:0 8px;color:#9ca99c}
+.home-page .intro h1{
+  max-width:680px;margin:0 0 22px;font-size:clamp(45px,5vw,71px);
+  line-height:1.08;letter-spacing:-.07em;font-weight:800;
+}
+.home-page .intro h1 em{font-style:normal;color:var(--accent)}
+.home-page .intro-lead{
+  max-width:600px;margin:0;color:#49554b;font-size:16px;line-height:1.8;
+}
+.home-page .intro-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:29px}
+.home-page .intro-button{
+  display:inline-flex;align-items:center;justify-content:center;gap:18px;
+  min-height:47px;padding:11px 18px;border-radius:9px;border:1px solid #b6c8b9;
+  font-size:13px;font-weight:800;line-height:1.3;
+  transition:background .2s,transform .2s,border-color .2s;
+}
+.home-page .intro-button:hover{transform:translateY(-2px)}
+.home-page .intro-button-primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.home-page .intro-button-primary:hover{background:#274d3a}
+.home-page .intro-button-secondary{background:#f9faf6;color:#2b4939}
+.home-page .intro-button-secondary:hover{background:#e7eee5;border-color:var(--accent)}
+.home-page .intro-pillars{display:flex;gap:11px 21px;flex-wrap:wrap;margin-top:32px;color:#536c5a;font-size:11px;font-weight:650}
+.home-page .intro-pillars span{display:inline-flex;gap:8px;align-items:center}
+.home-page .intro-pillars i{width:6px;height:6px;border-radius:50%;background:#56866c}
+.home-page .intro-showcase{position:relative;padding:20px 9px 20px 0}
+.home-page .showcase-panel{
+  position:relative;overflow:hidden;min-height:472px;border:1px solid #557764;
+  border-radius:23px;background:
+    radial-gradient(ellipse at 60% 26%,rgba(110,167,123,.25),transparent 43%),
+    linear-gradient(140deg,#273a2d 0%,#1c2a22 74%,#1e2c23 100%);
+  box-shadow:0 28px 58px rgba(32,54,39,.19),0 8px 18px rgba(32,54,39,.09);
+  color:#eff7ec;display:flex;flex-direction:column;
+}
+.home-page .showcase-panel::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:radial-gradient(rgba(217,244,219,.24) .7px,transparent .7px);
+  background-size:15px 15px;opacity:.17;
+}
+.home-page .showcase-top{
+  position:relative;z-index:1;display:flex;align-items:center;
+  justify-content:space-between;padding:19px 23px;
+  border-bottom:1px solid rgba(215,237,220,.14);
+  font:700 10px/1.2 'DM Sans',sans-serif;letter-spacing:.15em;color:#bad1bf;
+}
+.home-page .showcase-lights{display:flex;gap:6px}
+.home-page .showcase-lights i{height:7px;width:7px;border-radius:50%;background:#5a806a}
+.home-page .showcase-lights i:first-child{background:#90b29b}
+.home-page .showcase-lights i:last-child{background:#466852}
+.home-page .showcase-visual{
+  position:relative;display:grid;place-items:center;min-height:236px;
+  isolation:isolate;
+}
+.home-page .showcase-ring{
+  position:absolute;top:50%;left:50%;aspect-ratio:1;border-radius:50%;
+  transform:translate(-50%,-50%);pointer-events:none;
+  border:1px solid rgba(155,204,167,.25);
+}
+.home-page .showcase-ring-one{width:205px}
+.home-page .showcase-ring-two{width:288px;border-style:dashed;border-color:rgba(155,204,167,.16)}
+.home-page .showcase-monogram{
+  position:relative;z-index:1;font:800 clamp(90px,11vw,136px)/1 Manrope,system-ui,sans-serif;
+  letter-spacing:-.12em;color:#e2ecdc;text-shadow:0 10px 35px rgba(0,0,0,.12);
+}
+.home-page .showcase-monogram span{color:#86bb91}
+.home-page .showcase-cross{position:absolute;color:#92b89a;font-size:20px;font-weight:400}
+.home-page .showcase-cross-a{top:29px;left:53px}
+.home-page .showcase-cross-b{right:57px;bottom:25px}
+.home-page .showcase-info{
+  position:relative;z-index:1;margin:auto 24px 25px;padding-top:17px;
+  border-top:1px solid rgba(215,237,220,.16);
+}
+.home-page .showcase-kicker{margin:0 0 6px;color:#a3c6ab;font-size:10px;letter-spacing:.15em;font-weight:800}
+.home-page .showcase-title{
+  max-width:300px;margin:0;font:600 25px/1.22 Manrope,system-ui,sans-serif;
+  letter-spacing:-.045em;
+}
+.home-page .showcase-title strong{color:#a9d8b1}
+.home-page .showcase-tech{display:flex;gap:7px;flex-wrap:wrap;margin-top:19px}
+.home-page .showcase-tech span{
+  border:1px solid rgba(186,216,190,.3);background:rgba(242,250,240,.055);
+  color:#e1e9df;border-radius:999px;padding:5px 9px;
+  font-size:10px;font-weight:700;line-height:1.5;
+}
+.home-page .showcase-sticker{
+  position:absolute;right:-20px;bottom:-17px;z-index:2;display:flex;align-items:center;
+  gap:12px;padding:15px 18px;border:1px solid #c4d4c3;background:#fcfdf7;
+  color:var(--ink);border-radius:13px;box-shadow:0 12px 28px rgba(22,47,30,.12);
+}
+.home-page .sticker-mark{display:grid;place-items:center;height:38px;width:38px;border-radius:10px;background:#e2ecdf;color:var(--accent);font-size:21px}
+.home-page .showcase-sticker strong{display:block;font:800 19px/1.2 Manrope,system-ui,sans-serif;letter-spacing:-.04em}
+.home-page .showcase-sticker small{display:block;color:#667568;font-size:10px;font-weight:650;margin-top:2px}
+@media(max-width:1050px){
+ .home-page .intro-layout{gap:34px;grid-template-columns:minmax(0,1fr) minmax(300px,.78fr)}
+ .home-page .intro h1{font-size:clamp(44px,5.4vw,64px)}
+ .home-page .intro-showcase{padding-right:0}
+ .home-page .showcase-sticker{right:-6px}
+}
+@media(max-width:780px){
+ .home-page .site-header{padding:18px 0}
+ .home-page .site-header nav{gap:17px;flex-wrap:wrap}
+ .home-page .intro{padding:65px 0 84px}
+ .home-page .intro-layout{grid-template-columns:1fr;gap:45px}
+ .home-page .intro-copy{max-width:690px}
+ .home-page .intro h1{font-size:clamp(46px,8.1vw,70px)}
+ .home-page .intro-showcase{max-width:570px;width:100%;margin:0 auto}
+ .home-page .showcase-panel{min-height:420px}
+ .home-page .showcase-visual{min-height:187px}
+ .home-page .showcase-monogram{font-size:110px}
+ .home-page .showcase-ring-one{width:178px}
+ .home-page .showcase-ring-two{width:250px}
+}
+@media(max-width:520px){
+ .home-page .site-header{position:static}
+ .home-page .site-header nav{gap:12px}
+ .home-page .site-header nav a{font-size:12px}
+ .home-page .site-header .header-contact{padding:6px 11px;min-height:32px}
+ .home-page .intro{padding:47px 0 75px}
+ .home-page .intro-overline{font-size:9px}
+ .home-page .intro-eyebrow{font-size:9px}
+ .home-page .intro h1{font-size:clamp(40px,10.5vw,53px);line-height:1.1}
+ .home-page .intro-lead{font-size:15px;line-height:1.75}
+ .home-page .intro-actions{gap:9px}
+ .home-page .intro-button{flex:1 1 100%;justify-content:space-between;min-height:46px}
+ .home-page .intro-pillars{gap:8px 13px;margin-top:24px}
+ .home-page .showcase-panel{min-height:392px;border-radius:17px}
+ .home-page .showcase-visual{min-height:160px}
+ .home-page .showcase-monogram{font-size:92px}
+ .home-page .showcase-info{margin:0 19px 23px}
+ .home-page .showcase-title{font-size:22px}
+ .home-page .showcase-sticker{right:-4px;bottom:-20px;padding:10px 12px}
+ .home-page .showcase-sticker strong{font-size:16px}
+ .home-page .sticker-mark{width:33px;height:33px}
+}
+@media(prefers-reduced-motion:reduce){
+ .home-page .intro-button,.home-page .site-header .header-contact{transition:none}
+}
+
